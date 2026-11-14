@@ -1,0 +1,17 @@
+{
+  "name": "json-pointer-reference-resolver",
+  "version": "0.1.0",
+  "description": "Looks up a JSON Pointer in an object and checks the target exists.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "BSD-3-Clause",
+  "dependencies": {}
+}
