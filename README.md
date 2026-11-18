@@ -37,3 +37,10 @@ Array indices follow RFC 6901 exactly: only `0` and unsigned integers without a 
 - `formatPointer(tokens)` — encodes a `string[]` back into a JSON Pointer string.
 
 The empty pointer `''` addresses the whole document. The token `''` (written as `/`) addresses the property whose name is the empty string, which is valid per the spec.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
